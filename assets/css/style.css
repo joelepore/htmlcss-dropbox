@@ -62,10 +62,6 @@ a {
   min-height: 80px;
 }
 
-#partner .container {
-  min-height: 500px;
-}
-
 /* UTILS */
 .container-big {
   max-width: 1180px;
@@ -96,6 +92,10 @@ a {
   width: 100%;
   text-align: center;
   padding: 10px 20px;
+}
+
+.btn:hover {
+  opacity: .8;
 }
 
 .btn-secondary {
