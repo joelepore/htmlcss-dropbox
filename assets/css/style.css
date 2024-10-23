@@ -46,6 +46,10 @@ h2 {
   min-height: 500px;
 }
 
+#business .container {
+  min-height: 1500px;
+}
+
 /* UTILS */
 .container-big {
   max-width: 1180px;
@@ -83,7 +87,12 @@ header {
   height: 100%;
 }
 
+main {
+  padding-bottom: var(--pt-section);
+}
+
 #plans,
-#partner {
+#partner,
+#business {
   padding-top: var(--pt-section);
 }
