@@ -241,15 +241,12 @@ a {
 }
 
 /* SPECIFIC */
-
 header {
   display: flex;
   justify-content: space-between;
   padding: 0 var(--px-header);
   background-color: var(--color-bg-header);
-  /* height: var(--h-header); */
 }
-
 
 header nav,
 .header-menu,
@@ -261,11 +258,6 @@ header nav,
 .header-logo {
   margin-right: var(--gap-header);
   max-width: 130px;
-}
-
-.header-menu li,
-.header-menu li a {
-  display: inline-block;
 }
 
 .header-menu li a {
@@ -331,11 +323,19 @@ header nav .btn {
   flex-direction: column;
   gap: 2rem;
   margin-top: var(--offset-jumbo);
+  position: relative;
 }
 
 .jumbotron-image {
   position: relative;
   top: var(--offset-jumbo);
+}
+
+.jumbo-arrow {
+  font-size: 3rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 main {
