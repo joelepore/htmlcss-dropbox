@@ -2,6 +2,7 @@
   /* colors */
   --color-bg-header: white;
   --color-bg-btn: #0061ff;
+  --color-bg-btn-secondary: rgba(255, 255, 255, 0);
   --color-bg-jumbo: #b4d0e7;
   --color-bg-footer: #000;
   --color-link-header: #000;
@@ -86,6 +87,8 @@ footer {
   display: flex;
 }
 
+
+/* COMPONENTS */
 .btn {
   color: white;
   background-color: var(--color-bg-btn);
@@ -100,7 +103,12 @@ footer {
   padding: 10px 20px;
 }
 
-/* COMPONENTS */
+.btn-secondary {
+  background-color: var(--color-bg-btn-secondary);
+  color: black;
+  border: 1px solid black;
+}
+
 .cards-container .col {
   --n-col: 3;
   width: calc(100%/var(--n-col) - var(--gap-card-plans));
@@ -313,6 +321,22 @@ main {
 
 #plans .cards-container .col.full {
   width: 100%;
+}
+
+#partner .col:first-child {
+  width: 60%;
+}
+
+#partner .col:last-child {
+  width: 40%;
+}
+
+#partner .col:last-child>div {
+  padding: 3rem;
+}
+
+#partner .col:last-child>div p {
+  padding: 1.5rem 0;
 }
 
 #business .row {
