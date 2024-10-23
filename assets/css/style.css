@@ -1,0 +1,57 @@
+:root {
+  --color-bg-jumbo: #b4d0e7;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* DEBUG */
+.debug {
+  border: 1px dashed black;
+  background-color: #fd343425;
+  min-height: 80px;
+}
+
+#jumbotron {
+  min-height: 739px;
+}
+
+/* UTILS */
+.container-big {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-left,
+.header-right {
+  height: 100%;
+  width: 50%;
+}
+
+.header-right {
+  text-align: end;
+}
+
+#jumbotron {
+  background-color: var(--color-bg-jumbo);
+  padding-top: 5rem;
+}
+
+#jumbotron .container-big {
+  min-height: 650px;
+  width: 100%;
+  height: 100%;
+}
