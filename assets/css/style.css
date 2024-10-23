@@ -6,11 +6,13 @@
   --color-bg-footer: #000;
   --color-link-header: #000;
   --color-footer: white;
+  --color-border: #d0d0d3;
   /* margins */
   --pt-section: 9rem;
   --py-header: 2rem;
   --px-header: 1rem;
   --gap-header: 3rem;
+  --gap-card-plans: 50px;
   --offset-jumbo: 70px;
   /* heights */
   --h-header: 80px;
@@ -33,6 +35,11 @@ h1 {
 
 h2 {
   font-size: 2.5rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.5rem;
 }
 
 img {
@@ -49,10 +56,6 @@ a {
   border: 1px dashed black;
   background-color: #fd343425;
   min-height: 80px;
-}
-
-#plans .input-container {
-  min-height: 140px
 }
 
 #partner .container {
@@ -89,6 +92,137 @@ footer {
   padding: 8px 1rem;
   display: inline-block;
   text-decoration: none;
+}
+
+.btn-big {
+  width: 100%;
+  text-align: center;
+  padding: 10px 20px;
+}
+
+/* COMPONENTS */
+.cards-container .col {
+  --n-col: 3;
+  width: calc(100%/var(--n-col) - var(--gap-card-plans));
+}
+
+.cards-container .row {
+  gap: var(--gap-card-plans);
+}
+
+.card-plans {
+  border: 1px solid var(--color-border);
+  font-size: 0.95rem;
+  height: 100%;
+}
+
+.card-plans ul {
+  list-style: none;
+}
+
+.card-plans .card-plans-type {
+  padding: 1rem 0;
+  text-align: center;
+  border-bottom: 1px solid var(--color-border);
+  font-size: .9rem;
+}
+
+.card-plans .card-plans-content {
+  padding: 2rem 25px;
+}
+
+.card-plans-content strong,
+.card-plans-content p {
+  font-size: .9rem;
+}
+
+.card-plans-content strong {
+  padding: 1rem 0 .5rem;
+  display: inline-block;
+}
+
+.card-plans-content p:first-of-type {
+  color: grey;
+}
+
+.card-plans-content p:nth-of-type(2) {
+  padding-top: 2rem;
+}
+
+.card-plans-content p a {
+  text-decoration: underline;
+  color: var(--color-bg-btn);
+}
+
+.card-plans-content .spacer {
+  width: 50px;
+  border-bottom: 1px solid var(--color-border);
+  margin: 2rem 0;
+}
+
+.card-plans-content ul:first-of-type {
+  padding: 2.5rem 0;
+}
+
+.card-plans-content h4+ul {
+  margin-top: 1rem;
+}
+
+.card-plans-content ul li {
+  padding: .8rem 0;
+}
+
+.card-plans .user::before,
+.card-plans .team::before,
+.card-plans .company::before,
+.card-plans .folder::before,
+.card-plans .share::before,
+.card-plans .check::before {
+  font-family: 'Font Awesome\ 5 Free';
+  font-weight: 900;
+  display: inline-block;
+  margin-right: .5rem;
+}
+
+.card-plans .user::before {
+  content: '\f007';
+}
+
+.card-plans .folder::before {
+  content: '\f07b';
+}
+
+.card-plans .share::before {
+  content: '\f1e0';
+}
+
+.card-plans .team::before {
+  content: '\f0c0';
+}
+
+.card-plans .company::before {
+  content: '\f1ad';
+}
+
+.card-plans .check::before {
+  content: '\f00c';
+  color: var(--color-bg-btn);
+}
+
+.card-plans.horizontal .card-plans-content p {
+  color: black;
+}
+
+.card-plans.horizontal .card-plans-content {
+  display: flex;
+}
+
+.card-plans.horizontal .card-plans-content div:first-child {
+  width: 70%;
+}
+
+.card-plans.horizontal .card-plans-content div:last-child {
+  flex-grow: 1;
 }
 
 /* SPECIFIC */
@@ -168,20 +302,17 @@ main {
   padding-top: var(--pt-section);
 }
 
+#plans .input-container {
+  padding: 3rem 0;
+}
+
 #plans .row {
   flex-wrap: wrap;
 }
 
-#plans .cards-container .col {
-  width: calc(100%/3);
-  /* debug */
-  min-height: 800px;
-}
 
 #plans .cards-container .col.full {
   width: 100%;
-  /* debug */
-  min-height: 260px;
 }
 
 #business .row {
