@@ -1,11 +1,26 @@
 :root {
+  /* colors */
   --color-bg-jumbo: #b4d0e7;
+  /* margins */
+  --pt-section: 9rem;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans';
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
 }
 
 /* DEBUG */
@@ -17,6 +32,18 @@
 
 #jumbotron {
   min-height: 739px;
+}
+
+#plans .input-container {
+  min-height: 140px
+}
+
+#plans .cards-container {
+  min-height: 1500px;
+}
+
+#partner .container {
+  min-height: 500px;
 }
 
 /* UTILS */
@@ -54,4 +81,9 @@ header {
   min-height: 650px;
   width: 100%;
   height: 100%;
+}
+
+#plans,
+#partner {
+  padding-top: var(--pt-section);
 }
