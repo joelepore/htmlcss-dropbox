@@ -13,6 +13,7 @@
   --py-header: 2rem;
   --px-header: 1rem;
   --gap-header: 3rem;
+  --gap-card-business: 50px;
   --gap-card-plans: 50px;
   --offset-jumbo: 70px;
   /* heights */
@@ -63,10 +64,6 @@ a {
   min-height: 500px;
 }
 
-#business .container {
-  min-height: 1500px;
-}
-
 footer {
   min-height: 580px;
 }
@@ -111,7 +108,7 @@ footer {
 
 .cards-container .col {
   --n-col: 3;
-  width: calc(100%/var(--n-col) - var(--gap-card-plans));
+  width: calc((100% + var(--gap-card-plans))/3 - var(--gap-card-plans));
 }
 
 .cards-container .row {
@@ -233,6 +230,10 @@ footer {
   flex-grow: 1;
 }
 
+.card-business p {
+  padding-top: 2rem;
+}
+
 /* SPECIFIC */
 
 header {
@@ -341,12 +342,25 @@ main {
 
 #business .row {
   flex-wrap: wrap;
+  gap: var(--gap-card-business);
 }
 
 #business .col {
-  /* debug */
-  min-height: 520px;
-  width: calc(100%/3);
+  width: calc((100% + var(--gap-card-business))/3 - var(--gap-card-business));
+}
+
+#business h2 {
+  margin-bottom: 2rem;
+}
+
+#business .business-bottom {
+  margin-top: 6rem;
+  width: 60%;
+}
+
+#business .business-bottom a {
+  color: var(--color-bg-btn);
+  text-decoration: underline;
 }
 
 footer {
