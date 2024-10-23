@@ -40,10 +40,6 @@ h2 {
   min-height: 140px
 }
 
-#plans .cards-container {
-  min-height: 1500px;
-}
-
 #partner .container {
   min-height: 500px;
 }
@@ -66,6 +62,12 @@ footer {
   max-width: 1000px;
   margin: 0 auto;
 }
+
+.row {
+  display: flex;
+}
+
+/* SPECIFIC */
 
 header {
   display: flex;
@@ -101,6 +103,21 @@ main {
 #partner,
 #business {
   padding-top: var(--pt-section);
+}
+
+#plans .row {
+  flex-wrap: wrap;
+}
+
+#plans .cards-container .col {
+  width: calc(100%/3);
+  /* debug */
+  min-height: 800px;
+}
+
+#plans .cards-container .col.full {
+  width: 100%;
+  min-height: 260px;
 }
 
 footer {
