@@ -117,7 +117,18 @@ main {
 
 #plans .cards-container .col.full {
   width: 100%;
+  /* debug */
   min-height: 260px;
+}
+
+#business .row {
+  flex-wrap: wrap;
+}
+
+#business .col {
+  /* debug */
+  min-height: 520px;
+  width: calc(100%/3);
 }
 
 footer {
