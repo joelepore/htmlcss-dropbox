@@ -13,3 +13,8 @@ Creiamo delle classi riutilizzabili individuando gli elementi ricorrenti nel lay
 Non lavoriamo ancora sul responsive, quindi la nostra pagina non deve adattarsi a tutti i possibili viewport. Se comunque riusciamo almeno a lavorare già un pò con unità relative, senza però crearci nuove difficoltà, tanto meglio.
 
 Buon lavoro!
+## Svolgimento
+1. Creo la struttura a blocchi delle macroaree
+2. Creo la struttura a blocchi nel dettaglio
+3. Riempio i blocchi con testo e immagini
+4. Sviluppo i dettagli (:hover, ancore, ecc.)
