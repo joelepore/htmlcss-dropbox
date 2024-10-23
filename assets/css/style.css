@@ -6,7 +6,9 @@
   --color-bg-jumbo: #b4d0e7;
   --color-bg-footer: #000;
   --color-link-header: #000;
+  --color-link-footer: white;
   --color-footer: white;
+  --color-footer-lang: #989898;
   --color-border: #d0d0d3;
   /* margins */
   --pt-section: 9rem;
@@ -62,10 +64,6 @@ a {
 
 #partner .container {
   min-height: 500px;
-}
-
-footer {
-  min-height: 580px;
 }
 
 /* UTILS */
@@ -177,39 +175,41 @@ footer {
   padding: .8rem 0;
 }
 
-.card-plans .user::before,
-.card-plans .team::before,
-.card-plans .company::before,
-.card-plans .folder::before,
-.card-plans .share::before,
-.card-plans .check::before {
+.user::before,
+.team::before,
+.company::before,
+.folder::before,
+.share::before,
+.check::before,
+.world::before,
+.arrow-after::after {
   font-family: 'Font Awesome\ 5 Free';
   font-weight: 900;
   display: inline-block;
   margin-right: .5rem;
 }
 
-.card-plans .user::before {
+.user::before {
   content: '\f007';
 }
 
-.card-plans .folder::before {
+.folder::before {
   content: '\f07b';
 }
 
-.card-plans .share::before {
+.share::before {
   content: '\f1e0';
 }
 
-.card-plans .team::before {
+.team::before {
   content: '\f0c0';
 }
 
-.card-plans .company::before {
+.company::before {
   content: '\f1ad';
 }
 
-.card-plans .check::before {
+.check::before {
   content: '\f00c';
   color: var(--color-bg-btn);
 }
@@ -232,6 +232,12 @@ footer {
 
 .card-business p {
   padding-top: 2rem;
+}
+
+.spacer.big {
+  border-bottom: 1px solid white;
+  margin: 3rem 0;
+  width: 100px;
 }
 
 /* SPECIFIC */
@@ -366,4 +372,45 @@ main {
 footer {
   background-color: var(--color-bg-footer);
   color: var(--color-footer);
+  padding-top: 100px;
+  padding-bottom: 3rem;
+}
+
+.footer-menu-container {
+  display: flex;
+}
+
+.footer-menu {
+  flex-grow: 1;
+  padding-bottom: 100px;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer h3 {
+  line-height: 5rem;
+}
+
+footer ul li {
+  line-height: 2.6rem;
+}
+
+footer a {
+  color: var(--color-link-footer);
+}
+
+.footer-lang {
+  color: var(--color-footer-lang);
+}
+
+.world::before {
+  content: '\f57d';
+}
+
+.arrow-after::after {
+  content: '\f0d8';
+  margin-left: .5rem;
+  display: inline-block;
 }
