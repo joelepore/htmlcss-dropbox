@@ -1,10 +1,18 @@
 :root {
   /* colors */
+  --color-bg-header: white;
+  --color-bg-btn: #0061ff;
   --color-bg-jumbo: #b4d0e7;
-  --color-footer: white;
   --color-bg-footer: #000;
+  --color-link-header: #000;
+  --color-footer: white;
   /* margins */
   --pt-section: 9rem;
+  --py-header: 2rem;
+  --px-header: 1rem;
+  --gap-header: 3rem;
+  /* heights */
+  --h-header: 80px;
 }
 
 * {
@@ -23,6 +31,10 @@ h1 {
 
 h2 {
   font-size: 2.5rem;
+}
+
+img {
+  max-width: 100%;
 }
 
 /* DEBUG */
@@ -67,21 +79,48 @@ footer {
   display: flex;
 }
 
+.btn {
+  color: white;
+  background-color: var(--color-bg-btn);
+  padding: 8px 1rem;
+}
+
 /* SPECIFIC */
 
 header {
   display: flex;
   justify-content: space-between;
+  padding: 0 var(--px-header);
+  background-color: var(--color-bg-header);
+  height: var(--h-header);
+}
+
+.header-logo {
+  margin-right: var(--gap-header);
+  max-width: 130px;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+  gap: var(--gap-header);
+}
+
+header ul li a {
+  text-decoration: none;
+  color: var(--color-link-header);
 }
 
 .header-left,
 .header-right {
   height: 100%;
   width: 50%;
+  display: flex;
+  align-items: center;
 }
 
 .header-right {
-  text-align: end;
+  justify-content: end;
 }
 
 #jumbotron {
