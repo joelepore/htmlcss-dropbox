@@ -11,6 +11,7 @@
   --py-header: 2rem;
   --px-header: 1rem;
   --gap-header: 3rem;
+  --offset-jumbo: 70px;
   /* heights */
   --h-header: 80px;
 }
@@ -26,7 +27,8 @@ body {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 5rem;
+  font-weight: 900;
 }
 
 h2 {
@@ -37,15 +39,16 @@ img {
   max-width: 100%;
 }
 
+a {
+  text-decoration: none;
+  color: var(--color-link-header);
+}
+
 /* DEBUG */
 .debug {
   border: 1px dashed black;
   background-color: #fd343425;
   min-height: 80px;
-}
-
-#jumbotron {
-  min-height: 739px;
 }
 
 #plans .input-container {
@@ -75,6 +78,7 @@ footer {
   margin: 0 auto;
 }
 
+.flex,
 .row {
   display: flex;
 }
@@ -83,6 +87,8 @@ footer {
   color: white;
   background-color: var(--color-bg-btn);
   padding: 8px 1rem;
+  display: inline-block;
+  text-decoration: none;
 }
 
 /* SPECIFIC */
@@ -100,15 +106,20 @@ header {
   max-width: 130px;
 }
 
-header ul {
+.header-menu {
   list-style: none;
   display: flex;
   gap: var(--gap-header);
+  align-items: baseline;
 }
 
-header ul li a {
+.header-menu a {
   text-decoration: none;
   color: var(--color-link-header);
+}
+
+header nav .btn {
+  color: white;
 }
 
 .header-left,
@@ -132,6 +143,19 @@ header ul li a {
   min-height: 650px;
   width: 100%;
   height: 100%;
+}
+
+.jumbotron-content {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: var(--offset-jumbo);
+}
+
+.jumbotron-image {
+  position: relative;
+  top: var(--offset-jumbo);
 }
 
 main {
