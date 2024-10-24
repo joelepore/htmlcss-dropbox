@@ -28,7 +28,8 @@
   box-sizing: border-box;
 }
 
-html {
+html,
+body {
   scroll-behavior: smooth;
 }
 
@@ -169,6 +170,10 @@ a {
 
 .card-plans-content ul:first-of-type {
   padding: 2.5rem 0 2.5rem 25px;
+}
+
+.card-plans-content ul:last-of-type {
+  padding: 0 0 2.5rem 25px;
 }
 
 .card-plans-content ul {
