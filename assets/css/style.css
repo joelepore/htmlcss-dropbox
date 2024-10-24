@@ -28,6 +28,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Open Sans';
 }
@@ -164,7 +168,12 @@ a {
 }
 
 .card-plans-content ul:first-of-type {
-  padding: 2.5rem 0;
+  padding: 2.5rem 0 2.5rem 25px;
+}
+
+.card-plans-content ul {
+  padding: 2.5rem 0 2.5rem 25px;
+  position: relative;
 }
 
 .card-plans-content h4+ul {
@@ -188,6 +197,20 @@ a {
   display: inline-block;
   margin-right: .5rem;
 }
+
+.card-plans-content ul .user::before,
+.card-plans-content ul .team::before,
+.card-plans-content ul .company::before,
+.card-plans-content ul .folder::before,
+.card-plans-content ul .share::before,
+.card-plans-content ul .check::before,
+.card-plans-content ul .world::before,
+.card-plans-content ul .arrow-after::after {
+  position: absolute;
+  left: 0px;
+  transform: translateY(20%);
+}
+
 
 .user::before {
   content: '\f007';
