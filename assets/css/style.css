@@ -298,6 +298,10 @@ header nav,
   text-decoration: none;
   color: var(--color-link-header);
   vertical-align: middle;
+  border-bottom: 2px solid rgba(0, 0, 0, 0);
+  transition-property: border;
+  transition-duration: 50ms;
+  transition-timing-function: ease-in-out;
 }
 
 .header-menu a:hover {
